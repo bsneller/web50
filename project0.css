@@ -1,0 +1,43 @@
+		html,body {
+			height:100%;
+			width:100%;
+			margin:0;
+			}
+		body {
+			display:flex;
+			}
+
+		#searchpage {
+			position: relative;
+			display: table;
+			width: 100%;
+			}
+		#searchpage #searchimage{
+			position: absolute;
+			top: 0px;
+			right: 0px;			
+			margin-top: 10px;
+			margin-right: 10px;
+		}
+		#searchpage #searchimage2{
+			position: absolute;
+			top: 30px;
+			right: 0px;			
+			margin-top: 10px;
+			margin-right: 10px;
+		}		
+		#searchpage #searchadv{
+			position: absolute;
+			top: 30px;
+			right: 0px;			
+			margin-top: 10px;
+			margin-right: 10px;
+		}
+		#searchform {
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+			}
+		.textinput {
+			border-radius:10px;
+			}
