@@ -1,43 +1,277 @@
-		html,body {
-			height:100%;
-			width:100%;
-			margin:0;
-			}
-		body {
-			display:flex;
-			}
 
-		#searchpage {
-			position: relative;
-			display: table;
-			width: 100%;
-			}
-		#searchpage #searchimage{
-			position: absolute;
-			top: 0px;
-			right: 0px;			
-			margin-top: 10px;
-			margin-right: 10px;
-		}
-		#searchpage #searchimage2{
-			position: absolute;
-			top: 30px;
-			right: 0px;			
-			margin-top: 10px;
-			margin-right: 10px;
-		}		
-		#searchpage #searchadv{
-			position: absolute;
-			top: 30px;
-			right: 0px;			
-			margin-top: 10px;
-			margin-right: 10px;
-		}
-		#searchform {
-			display: table-cell;
-			text-align: center;
-			vertical-align: middle;
-			}
-		.textinput {
-			border-radius:10px;
-			}
+/* PROJECT */
+#searchpage {
+	position: relative;
+	display: table;
+	width: 100%;
+}
+#searchpage 
+#searchimage{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+#searchpage 
+#searchimage2{
+	position: absolute;
+	top: 30px;
+	right: 0px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+#searchpage 
+#searchadv {
+	position: absolute;
+	top: 30px;
+	right: 0px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+#searchpage 
+#searchtable{
+	position: absolute;
+	top: 30%;
+	right: 40%;
+}
+#searchform {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+.textinput {
+	border-radius:10px;
+	width:20%
+}
+
+/* CONTAINERS */
+
+html,
+body {
+  color: #222;
+  font: 13px/18px arial, sans-serif;
+  margin: 0;
+  display:flex;
+  height:100%;
+  width:100%;
+}
+
+.sidebar {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 12px;
+  position: absolute;
+  width: 100%;
+}
+
+.block {
+  display: block;
+}
+
+.block + .block {
+  margin-top: 16px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.inline + .inline {
+  margin-left: 12px;
+}
+
+.top,
+.top-left {
+  top: 0;
+  position: absolute;
+}
+
+.top-right {
+  top: 0;
+  position: absolute;
+  right: 0;
+}
+
+.bottom,
+.bottom-left,
+.button-bar {
+  bottom: 0;
+  position: absolute;
+}
+
+.bottom-right,
+.button-bar-right {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+
+/* TEXT */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+  font: 16px/24px arial, sans-serif, normal;
+}
+
+a {
+  color: #15c;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.current {
+  color: #dd4b39;
+  font-weight: bold;
+}
+
+.error {
+  color: #dd4b39;
+}
+
+.gray,
+.grey {
+  color: #777;
+}
+
+.secondary,
+.small {
+  color: #777;
+  font: 11px/16px arial, sans-serif;
+}
+
+/* TABLES */
+
+table {
+  border-spacing: 0;
+}
+
+th {
+  border-bottom: 1px solid #acacac;
+  font-weight: normal;
+  padding: 2px 0 11px 0;
+  text-align: left;
+}
+
+td {
+  border-bottom: 1px solid #ebebeb;
+  padding: 11px 10px;
+  text-align:left;
+}
+
+tr:last-child > td, tr:last-child > th {
+  border-bottom: 0;
+}
+
+table.layout th,
+table.layout td {
+  border: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+/* BUTTONS */
+
+.button,
+button,
+input[type="button"],
+input[type="image"],
+input[type="reset"],
+input[type="submit"] {
+  background: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
+  background: -ms-linear-gradient(top, #f5f5f5, #f1f1f1);
+  background: -o-linear-gradient(top, #f5f5f5, #f1f1f1);
+  background: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+  background: linear-gradient(top, #f5f5f5, #f1f1f1);
+  border: 1px solid #dcdcdc;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #333;
+  cursor: default;
+  font-family: arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  height: 29px;
+  line-height: 27px;
+  margin: 0;
+  min-width: 72px;
+  outline: 0;
+  padding: 0 8px;
+  text-align: center;
+  white-space: nowrap;
+  margin-top: 10px;
+
+}
+.button {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0;
+}
+
+.button.action,
+.button.blue,
+button.action,
+button.blue,
+input[type="button"].action,
+input[type="button"].blue,
+input[type="submit"].action,
+input[type="submit"].blue {
+  background: -moz-linear-gradient(top, #4d90fe, #4787ed);
+  background: -ms-linear-gradient(top, #4d90fe, #4787ed);
+  background: -o-linear-gradient(top, #4d90fe, #4787ed);
+  background: -webkit-linear-gradient(top, #4d90fe, #4787ed);
+  background: linear-gradient(top, #4d90fe, #4787ed);
+  border: 1px solid #3079ed;
+  color: #fff;
+}
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  height: 25px;
+}
+
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+select[multiple]:focus,
+select[size]:focus,
+textarea:focus {
+  border: 1px solid #4d90fe;
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+}
